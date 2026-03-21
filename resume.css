@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 35%;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 2.5rem 2rem;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #34495e;
+    margin-bottom: 1rem;
+}
+
+.profile-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.profile-section h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #bdc3c7;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-section {
+    margin-bottom: 2.5rem;
+}
+
+.contact-section ul {
+    list-style: none;
+}
+
+.contact-section ul li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.contact-section ul li i {
+    margin-right: 15px;
+    color: #3498db;
+    width: 16px;
+    text-align: center;
+}
+
+.skills-section .skill {
+    margin-bottom: 1rem;
+}
+
+.skills-section span {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+    background: #34495e;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress {
+    background: #3498db;
+    height: 100%;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Main Content */
+.main-content {
+    width: 65%;
+    padding: 3rem;
+}
+
+.main-content section {
+    margin-bottom: 2.5rem;
+}
+
+.main-content h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.main-content h3 i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+/* Timeline */
+.timeline-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-date {
+    flex: 0 0 120px;
+    font-weight: 600;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-left: 20px;
+    border-left: 2px solid #ecf0f1;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #3498db;
+    border-radius: 50%;
+}
+
+.timeline-content h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.timeline-content h5 {
+    color: #3498db;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(44, 62, 80, 0.9);
+    color: #fff;
+    text-align: center;
+    font-size: 0.85rem;
+    transition: bottom 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    bottom: 0;
+}
+
+/* Buttons */
+.print-btn {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2rem;
+}
+
+.print-btn:hover {
+    background: #2980b9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+    .sidebar {
+        padding: 2rem;
+    }
+    .timeline-item {
+        flex-direction: column;
+    }
+    .timeline-date {
+        margin-bottom: 0.5rem;
+    }
+    .timeline-content {
+        border-left: none;
+        padding-left: 0;
+    }
+    .timeline-content::before {
+        display: none;
+    }
+}
+
+/* Languages */
+.languages-section {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.lang-list {
+    list-style: none;
+}
+
+.lang-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    font-size: 0.9rem;
+}
+
+.lang-level {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.lang-level.native     { background: #27ae60; color: #fff; }
+.lang-level.fluent     { background: #3498db; color: #fff; }
+.lang-level.intermediate { background: #e67e22; color: #fff; }
+
+/* Soft Skills Tags */
+.soft-skills-section {
+    margin-bottom: 2rem;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 0.5rem;
+}
+
+.tag {
+    background: #34495e;
+    color: #ecf0f1;
+    border: 1px solid #3d566e;
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* Print Specific */
+@media print {
+    body { background: #fff; padding: 0; }
+    .resume-container { box-shadow: none; max-width: 100%; display: flex; flex-direction: row; }
+    .sidebar { width: 35%; padding-top: 0; }
+    .main-content { width: 65%; padding-top: 0; }
+    .print-btn { display: none; }
+}

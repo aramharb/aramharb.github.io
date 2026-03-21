@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <!-- Professional portrait placeholder -->
+                <img src="resume_photo.png" alt="Profile Photo" class="profile-pic">
+                <h1>Aram Harb</h1>
+                <h2>Junior Web Developer</h2>
+            </div>
+            
+            <div class="contact-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +216 58078339</li>
+                    <li><i class="fas fa-envelope"></i> aramharb123456789@email.com</li>
+                    <li><i class="fas fa-globe"></i> www.aramharb.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Tunisia ,TN</li>
+                </ul>
+            </div>
+
+            <div class="skills-section">
+                <h3>Tech Skills</h3>
+                <div class="skill">
+                    <span>HTML / CSS</span>
+                    <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress-bar"><div class="progress" data-width="35%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Angular</span>
+                    <div class="progress-bar"><div class="progress" data-width="55%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Node.js</span>
+                    <div class="progress-bar"><div class="progress" data-width="40%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Python / ML</span>
+                    <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
+                </div>
+                    <div class="skill">
+                    <span>Django</span>
+                    <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Git / Linux</span>
+                    <div class="progress-bar"><div class="progress" data-width="38%"></div></div>
+                </div>
+            </div>
+
+            <div class="languages-section">
+                <h3>Languages</h3>
+                <ul class="lang-list">
+                    <li><span>Arabic</span><span class="lang-level native">Native</span></li>
+                    <li><span>English</span><span class="lang-level fluent">Fluent</span></li>
+                    <li><span>French</span><span class="lang-level intermediate">Intermediate</span></li>
+                </ul>
+            </div>
+
+            <div class="soft-skills-section">
+                <h3>Soft Skills</h3>
+                <div class="tag-list">
+                    <span class="tag">Discipline</span>
+                    <span class="tag">Leadership</span>
+                    <span class="tag">Teamwork</span>
+                    <span class="tag">Problem Solving</span>
+                    <span class="tag">Adaptability</span>
+                    <span class="tag">Fast Learner</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="summary">
+                <h3><i class="fas fa-user"></i> About Me</h3>
+                <p>Ambitious junior web developer with a strong engineering foundation from the Military Academy. Self-driven and passionate about building modern, user-friendly web applications. Eager to grow, take on challenges, and contribute to impactful projects — currently seeking my first professional opportunity in web development.</p>
+            </section>
+
+            <section class="education">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 – 2025</div>
+                    <div class="timeline-content">
+                        <h4>Engineering Degree — Computer Science</h4>
+                        <h5>Military Academy, Tunisia</h5>
+                        <p>Five-year engineering program covering software engineering, algorithms, networks, embedded systems, and applied mathematics.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio">
+                <h3><i class="fas fa-code"></i> Personal Projects</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h4>Juridic Chatbot</h4>
+                        <h5>Python · NLP · Semantic Search .Node js . Angular . Django </h5>
+                        <p>Developed a semantic search engine to match user requests with relevant laws using weighted values to search within sections and subsections.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h4>ML Trading Strategy</h4>
+                        <h5>Machine Learning · AWS · Python</h5>
+                        <p>Developed an algorithmic trading strategy utilizing various Machine Learning models, and seamlessly deployed the strategy on AWS.</p>
+                    </div>
+                </div>
+            
+                <div class="portfolio-grid" style="margin-top:1.2rem;">
+                    <a href="https://github.com/aramharb/tunisian-law-regulation-chatbot" target="_blank" class="portfolio-item" style="display: block; text-decoration: none; color: inherit;">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Juridic Chatbot">
+                        <div class="portfolio-overlay">Juridic Chatbot</div>
+                    </a>
+                    <a href="https://github.com/aramharb/algorithmic-trading-models" target="_blank" class="portfolio-item" style="display: block; text-decoration: none; color: inherit;">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ML Trading Strategy">
+                        <div class="portfolio-overlay">ML Trading Strategy</div>
+                    </a>
+                </div>
+            </section>
+
+ 
+
+            <button id="print-btn" class="print-btn"><i class="fas fa-print"></i> Print Resume</button>
+        </main>
+    </div>
+    <script src="resume.js"></script>
+</body>
+</html>
